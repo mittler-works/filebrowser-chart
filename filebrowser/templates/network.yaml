@@ -26,8 +26,8 @@ metadata:
     app: filebrowser-quantum
   annotations:
     cert-manager.io/cluster-issuer: cluster-issuer
-    ingress.kubernetes.io/proxy-body-size: "0"
-    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    ingress.kubernetes.io/proxy-body-size: "{{ .Values.ingress.maxBodySize }}"
+    nginx.ingress.kubernetes.io/proxy-body-size: "{{ .Values.ingress.maxBodySize }}"
     kubernetes.io/tls-acme: 'true'
 spec:
   ingressClassName: {{ .Values.ingress.class }}

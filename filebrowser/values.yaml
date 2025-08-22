@@ -24,6 +24,7 @@ ingress:
   class: nginx
   host: filebrowser.example.com
   certSecret: secret
+  maxBodySize: 100M # 0 for unlimited
 
 persistence:
   enabled: true
