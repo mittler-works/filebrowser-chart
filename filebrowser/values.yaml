@@ -27,6 +27,7 @@ ingress:
 
 persistence:
   enabled: true
+  keep: true
   storageClass: standard
   accessMode: ReadWriteOnce
   configSize: 1Gi
