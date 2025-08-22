@@ -24,6 +24,11 @@ metadata:
   labels:
     release: {{ .Release.Name }}
     app: filebrowser-quantum
+  annotations:
+    cert-manager.io/cluster-issuer: cluster-issuer
+    ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    kubernetes.io/tls-acme: 'true'
 spec:
   ingressClassName: {{ .Values.ingress.class }}
   tls:
